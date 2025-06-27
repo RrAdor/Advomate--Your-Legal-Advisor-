@@ -1,4 +1,4 @@
-// Simple Express proxy for OpenAI API
+
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
