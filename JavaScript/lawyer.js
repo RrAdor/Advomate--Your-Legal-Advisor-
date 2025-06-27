@@ -1,6 +1,5 @@
-       import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-  // Replace with your actual project values
   const supabaseUrl = 'https://ognyvbpuccecvjmqjnjs.supabase.co'
   const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9nbnl2YnB1Y2NlY3ZqbXFqbmpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyOTEzNTksImV4cCI6MjA2NTg2NzM1OX0.rYnBV_CFotw0Z-FysCvqGhTbmrmJE9_gQ44N3F_u8CU';
  
@@ -219,7 +218,7 @@
           
           if (!lawyerPhone || isNaN(lawyerPhone)) {
             console.error('No valid phone number found for lawyer:', lawyer);
-            return; // Skip this lawyer if no phone is found
+            return; 
           }
           
           console.log('Lawyer data for hire button:', lawyer);
@@ -302,7 +301,6 @@
 
         console.log('Current user hired_lawyers:', currentUserData.hired_lawyers);
 
-        // For integer schema, hired_lawyers is a simple integer field
         // Get current user data
         const { data: userData, error: userError } = await supabase
           .from('users')
@@ -318,14 +316,12 @@
 
         console.log('Final hired lawyers data:', userData.hired_lawyers);
         
-        // Since hired_lawyers is now int type, it should contain a single lawyer phone number
         // If null/undefined, no lawyer is hired yet
         let currentHiredLawyer = userData.hired_lawyers;
         
         console.log('Current hired lawyer (integer phone):', currentHiredLawyer);
         console.log('Type:', typeof currentHiredLawyer);
         
-        // Check if lawyer is already hired (using phone number comparison)
         const lawyerPhoneInt = parseInt(lawyerPhone);
         const isAlreadyHired = currentHiredLawyer === lawyerPhoneInt;
         
@@ -336,8 +332,6 @@
           return;
         }
         
-        // For integer schema, we can only hire one lawyer at a time
-        // If user already has a hired lawyer, ask for confirmation to replace
         if (currentHiredLawyer !== null && currentHiredLawyer !== undefined) {
           const replaceConfirm = confirm(`You currently have a hired lawyer (phone: ${currentHiredLawyer}). Do you want to replace them with this new lawyer?`);
           if (!replaceConfirm) {
@@ -416,7 +410,6 @@
       }
     }
 
-    // Debug function to show current user state
     window.showUserState = async function() {
         const userEmail = localStorage.getItem('userEmail');
         if (!userEmail) {
@@ -447,7 +440,6 @@
         }
     };
 
-    // Add debug button (when debug=true in URL)
     if (window.location.search.includes('debug=true')) {
         const debugButton = document.createElement('button');
         debugButton.textContent = 'Show User State';
@@ -465,7 +457,6 @@
         debugButton.onclick = window.showUserState;
         document.body.appendChild(debugButton);
         
-        // Add test hired_lawyers button
         const testInitButton = document.createElement('button');
         testInitButton.textContent = 'Test Init';
         testInitButton.style.cssText = `
@@ -482,7 +473,6 @@
         testInitButton.onclick = window.testHiredLawyersInit;
         document.body.appendChild(testInitButton);
         
-        // Add schema check button
         const schemaButton = document.createElement('button');
         schemaButton.textContent = 'Check Schema';
         schemaButton.style.cssText = `
@@ -499,7 +489,6 @@
         schemaButton.onclick = window.checkUserSchema;
         document.body.appendChild(schemaButton);
         
-        // Add quick hire test button
         const hireTestButton = document.createElement('button');
         hireTestButton.textContent = 'Test Hire';
         hireTestButton.style.cssText = `
@@ -534,12 +523,10 @@
         document.body.appendChild(resetButton);
     }
 
-    // Test function to debug database issues
     async function testDatabaseConnection() {
         console.log('Testing database connection...');
         
         try {
-            // Test 1: Check if we can fetch users
             const { data: users, error: usersError } = await supabase
                 .from('users')
                 .select('*')
@@ -547,7 +534,6 @@
             
             console.log('Users test:', { users, usersError });
             
-            // Test 2: Check if we can fetch lawyers
             const { data: lawyers, error: lawyersError } = await supabase
                 .from('lawyer')
                 .select('*')
@@ -555,7 +541,6 @@
             
             console.log('Lawyers test:', { lawyers, lawyersError });
             
-            // Test 3: Check current user
             const userEmail = localStorage.getItem('userEmail');
             if (userEmail) {
                 const { data: currentUser, error: currentUserError } = await supabase
@@ -572,8 +557,6 @@
         }
     }
 
-    // Run test on page load (for debugging)
-    // testDatabaseConnection();
 
     // Test hiring functionality (for debugging)
     window.testHiring = async function() {
