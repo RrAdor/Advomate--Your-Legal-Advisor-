@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advomate - Your Legal Advisor</title>
+    <link rel="stylesheet" href="../CSS/chatBot.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-placeholder">
+                    <img src="../Image/Advomate.png" alt="Advomate Logo" style="width: 50px; height: 50px; width: auto;">
+                </div>
+                <h1>Advomate</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="chatBot.html">Services</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-welcome" id="userWelcomeSection" style="display: none;">
+                <span class="welcome-message">Welcome, <span id="welcomeUserName">User</span></span>
+                <div class="user-dropdown">
+                    <div class="user-icon" id="userProfileIcon">👤</div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="userProfile.html" class="dropdown-item">My Profile</a>
+                        <a href="lawyer.html" class="dropdown-item">Find Lawyers</a>
+                        <a href="#" class="dropdown-item" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login-register" id="loginRegisterSection">
+                <a href="login.html">Log In</a>
+                <a href="login.html">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Dashboard</h2>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="userProfile.html">
+                        <div class="menu-icon"></div>
+                        <span>My Timeline</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="track.html">
+                        <div class="menu-icon"></div>
+                        <span>Case Tracker</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Chatbot Section -->
+        <section class="chatbot-section">
+            <!-- API Selection -->
+            <div class="api-selector">
+                <label for="api-choice">Choose AI Service:</label>
+                <select id="api-choice">
+                    <option value="huggingface">🆓 Hugging Face (Free)</option>
+                    <option value="together">💰 Together AI ($1 free)</option>
+                    <option value="openai">💳 OpenAI (Paid)</option>
+                </select>
+                <div class="api-status" id="api-status">Ready to use Hugging Face (Free)</div>
+            </div>
+            
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <div class="chatbot-title">Advomate AI Legal Expert</div>
+                </div>
+                <div class="chatbot-messages">
+                    <div class="message bot-message">
+                        Hello! I'm your Advomate legal assistant. I can help with any legal question using free AI services. How can I help you today?</div>
+                </div>
+                <div class="chatbot-input">
+                    <div class="language-switch">
+                        <div class="language-option active">English</div>
+                    </div>
+                    <input type="text" class="message-input" placeholder="Type your message here...">
+                    <button class="send-btn">➤</button>
+                </div>
+            </div>
+
+            <div class="suggested-prompts">
+                <button class="prompt-btn">How do I file for divorce?</button>
+                <button class="prompt-btn">What are tenant rights in Bangladesh?</button>
+                <button class="prompt-btn">Steps to start a business legally</button>
+                <button class="prompt-btn">Employment contract essentials</button>
+            </div>
+            <div class="suggested-prompts">
+                <button class="prompt-btn">How to write a will?</button>
+                <button class="prompt-btn">Property dispute resolution</button>
+                <button class="prompt-btn">Criminal defense rights</button>
+                <button class="prompt-btn">Intellectual property basics</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <div class="feedback">
+                <button class="feedback-btn">Provide Feedback</button>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: group8@advomate.com</p>
+                <p>Phone: 0123-45679</p>
+                <p><a href="#">www.advomate.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/chatBot.js" type="module"></script>
+</body>
+</html>

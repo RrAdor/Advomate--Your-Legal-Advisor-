@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdVomate - Find Your Lawyer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/lawyer.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="../Image/Advomate.png" alt="AdVomate Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+            </div>
+            <div class="brand">AdVomate</div>
+        </div>
+        <div class="nav-links">
+            <a href="homePage.html">Home</a>
+            <a href="chatBot.html">Services</a>
+            <a href="Resources.html">Resources</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="userProfile.html" id="profileLink" style="display: none;">My Profile</a>
+        </div>
+        <div class="auth-links" id="authSection">
+            <a href="login.html">Log In</a>
+            <a href="login.html">Register</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section with Search -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Find Your Lawyer</h1>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Legal Issues or Lawyer Name" id="searchInput">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="filters">
+                    <div class="filter-label">Filter By:</div>
+                    <select class="filter-select" id ="genderSelect">
+                        <option value="" disabled selected>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <select class="filter-select" id="locationSelect">
+                        <option value="" disabled selected>Location</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Rangpur">Rangpur</option>
+                    </select>
+                </div>
+                <button class="get-started" id="searchButton">Get Started</button>
+            </div>
+      
+         <div class="search-results" id="searchResultsContainer">
+        
+        <h1 class="title">Search Results</h1>
+         <ul class="search-resultnew" id="searchResults"></ul>
+      </div>
+    </div>
+    </section>
+    
+    <!-- Lawyers Section -->
+    <section class="lawyers-section">
+        <h2 class="section-title">Get Professional Help from Our Network of 1000+ Lawyers:</h2>
+        
+        <div class="lawyer-slider">
+            <!-- Left Arrow -->
+            <button class="nav-arrow arrow-left">&lt;</button>
+            
+            <div class="lawyers-container" id="lawyersContainer">
+                <!-- Lawyer 1 -->
+                <div class="lawyer-card">
+                    <div class="lawyer-img">
+                        <img src="../Image/Sara.jpg" alt="Sara Hossain">
+                    </div>
+                    <div class="lawyer-info">
+                        <div class="lawyer-name">Sara Hossain</div>
+                        <div class="lawyer-specialty">
+                            Human rights, constitutional<br>
+                            <strong>Success Rate:</strong> ~85–90% in landmark public cases<br>
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lawyer 2 -->
+                <div class="lawyer-card">
+                    <div class="lawyer-img">
+                        <img src="../Image/Mahbub.jpeg" alt="Mahbub Uddin Khokon">
+                    </div>
+                    <div class="lawyer-info">
+                        <div class="lawyer-name">Mahbub Uddin Khokon</div>
+                        <div class="lawyer-specialty">
+                            Political, constitutional<br>
+                            <strong>Success Rate:</strong> ~70–80% in high-profile defense cases<br>
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lawyer 3 -->
+                <div class="lawyer-card">
+                    <div class="lawyer-img">
+                        <img src="../Image/kamal.jpg" alt="Dr. Kamal Hossain">
+                    </div>
+                    <div class="lawyer-info">
+                        <div class="lawyer-name">Dr. Kamal Hossain</div>
+                        <div class="lawyer-specialty">
+                            Constitutional, international<br>
+                            <strong>Success Rate:</strong> ~90% (drafted constitution, high-level impact)<br>
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lawyer 4 -->
+                <div class="lawyer-card">
+                    <div class="lawyer-img">
+                        <img src="../Image/Fawzia.jpeg" alt="Fawzia Karim Firoze">
+                    </div>
+                    <div class="lawyer-info">
+                        <div class="lawyer-name">Fawzia Karim Firoze</div>
+                        <div class="lawyer-specialty">
+                            Labor, women's rights<br>
+                            <strong>Success Rate:</strong> ~80–85% advocacy and case influence<br>
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lawyer 5 -->
+                <div class="lawyer-card">
+                    <div class="lawyer-img">
+                        <img src="../Image/nihad.jpeg" alt="Nihad Kabir">
+                    </div>
+                    <div class="lawyer-info">
+                        <div class="lawyer-name">Nihad Kabir</div>
+                        <div class="lawyer-specialty">
+                            Corporate, commercial<br>
+                            <strong>Success Rate:</strong> ~85–90% in corporate legal consulting<br>
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Arrow -->
+            <button class="nav-arrow arrow-right">&gt;</button>
+            
+            <div class="slider-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content" style="max-width: 1100px; margin: 0 auto; padding: 0 2rem;">
+            <button class="feedback-btn">Send Feedback</button>
+            <div class="contact-info">
+                <p><strong>Contact Us</strong></p>
+                <p>Email: <a href="mailto:info@advomate.com">info@advomate.com</a></p>
+                <p>Phone: <a href="tel:+880123456789">+880 1234 56789</a></p>
+                <p>Address: 123, Dhaka, Bangladesh</p>
+                <p> &copy; 2025 AdVomate. All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
+  <script type="module" src="../JavaScript/lawyer.js"></script>
+</body>
+</html>

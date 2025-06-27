@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advomate - Login & Registration</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-placeholder">
+                    <img src="../Image/Advomate.png" alt="Advomate Logo" style="width: 50px; height: 50px;">
+                </div>
+                <h1>Advomate</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Authentication Section -->
+    <section class="auth-container">
+        <div class="auth-box">
+            <!-- Side Image/Info -->
+            <div class="auth-side">
+                <div class="side-content">
+                    <h2>Welcome to Advomate</h2>
+                    <p>Join our platform to connect with qualified legal professionals and get the legal assistance you need.</p>
+                    <div class="side-testimonial">
+                        "Advomate helped me find the perfect attorney for my case. The process was simple and within hours I was connected with a professional who understood exactly what I needed."
+                        <div class="side-author">- Sarah M.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forms -->
+            <div class="auth-forms">
+                <div class="tabs">
+                    <div class="tab active" id="login-tab">Login</div>
+                    <div class="tab" id="register-tab">Register</div>
+                </div>
+
+                <div class="form-container">
+                    <!-- Login Form -->
+                    <form id="login-form" class="form active">
+                        <div class="form-group">
+                            <label for="login-email">Email Address</label>
+                            <input type="email" id="login-email" class="form-control" placeholder="Enter your email" required>
+                            <div class="validation-message" id="login-email-error">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required>
+                            <div class="validation-message" id="login-password-error">Password cannot be empty</div>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        
+                        <div class="alt-option">
+                            <a href="forgotPassword.html" id="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <div class="divider">
+                            <span>OR</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <div class="social-btn google">
+                                <span>Google</span>
+                            </div>
+                            <div class="social-btn linkedin">
+                                <span>LinkedIn</span>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Registration Form -->
+                    <form id="register-form" class="form">
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <input type="text" id="register-name" class="form-control" placeholder="Enter your full name" required>
+                            <div class="validation-message" id="register-name-error">Please enter your full name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">Email Address</label>
+                            <input type="email" id="register-email" class="form-control" placeholder="Enter your email" required>
+                            <div class="validation-message" id="register-email-error">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-location">Location</label>
+                            <input type="text" id="register-location" class="form-control" placeholder="Enter your location" required>
+                            <div class="validation-message" id="register-location-error">Please enter your location</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-phone">Phone Number</label>
+                            <input type="text" id="register-phone" class="form-control" placeholder="Enter your phone number" required>
+                            <div class="validation-message" id="register-phone-error">Please enter your phone number</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <input type="password" id="register-password" class="form-control" placeholder="Create a password" required>
+                            <div class="password-strength">
+                                <div class="strength-bar" id="bar-1"></div>
+                                <div class="strength-bar" id="bar-2"></div>
+                                <div class="strength-bar" id="bar-3"></div>
+                                <div class="strength-bar" id="bar-4"></div>
+                            </div>
+                            <div class="strength-text" id="password-strength-text">Password strength</div>
+                            <div class="form-help">Use 8+ characters with a mix of letters, numbers & symbols</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-confirm">Confirm Password</label>
+                            <input type="password" id="register-confirm" class="form-control" placeholder="Confirm your password" required>
+                            <div class="validation-message" id="register-confirm-error">Passwords do not match</div>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="feedback">
+                <button class="feedback-btn">Provide Feedback</button>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: group8@advomate.com</p>
+                <p>Phone: 0123-45679</p>
+                <p><a href="#">www.advomate.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../JavaScript/login.js"></script>
+</body>
+</html>

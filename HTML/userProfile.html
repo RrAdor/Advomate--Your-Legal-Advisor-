@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Advomate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/userProfile.css">
+</head>
+<body>
+    <!-- Header -->
+     <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-placeholder"><img src="../Image/Advomate.png" alt="Advomate Logo" style="width: 50px; height: 50px; width: auto;"></div>
+                <h1>AdvoMate</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="#" id="topChatBotLink">Services</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile-section">
+                <span class="welcome-message" id="welcomeMessage">Welcome, User!</span>
+                <div class="user-dropdown">
+                    <div class="user-icon" id="userProfileIcon">👤</div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#" class="dropdown-item" id="profileOption">My Profile</a>
+                        <a href="#" class="dropdown-item" id="settingsOption">Settings</a>
+                        <a href="#" class="dropdown-item logout" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- User Dashboard (Left Side) -->
+        <div class="user-dashboard">
+            <div class="profile-picture">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-name">Faiza Tashmeah</div>
+            <nav>
+                <ul class="dashboard-nav">
+                    <li><a href="#" class="active"><i class="fas fa-user"></i>Profile</a></li>
+                    <li><a href="#" id="chatBotLink"><i class="fas fa-comments"></i>Get Legal Advice</a></li>
+                    <li><a href="#" id="hireLawyerLink"><i class="fas fa-search"></i>Hire a Lawyer</a></li>
+                    <li><a href="#case-tracker"><i class="fas fa-clipboard-list"></i>Case Tracker</a></li>
+                </ul>
+            </nav>
+
+            <!-- User Details Container moved here -->
+            <div class="user-details">
+                <h2>User Details</h2>
+                <div class="user-info">
+                    <div class="info-item">
+                        <i class="fas fa-user-circle"></i>
+                        <div class="info-content">
+                            <h4>Full Name</h4>
+                            <p>FAIZA TASHMEAH</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-content">
+                            <h4>Contact Number</h4>
+                            <p>01831...</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>faiza...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content (Right Side) -->
+        <div class="main-content">
+            <!-- My Lawyers Section -->
+            <div class="my-lawyers">
+                <h2>My Lawyers</h2>
+                
+                <!-- Lawyers Grid -->
+                <div class="lawyers-grid" id="lawyersGrid">
+                    <div class="lawyer-card placeholder">
+                        <i class="fas fa-user-tie"></i>
+                        <p>No lawyers hired yet. Use the <strong>Hire a Lawyer</strong> link in the sidebar to find and hire lawyers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Update Section -->
+            <div class="case-updates">
+                <h2>My Cases</h2>
+                <div id="casesList">
+                    <!-- Cases will be loaded here dynamically -->
+                    <div class="case-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="case-content">
+                            <h4>Loading cases...</h4>
+                            <p>Please wait while we fetch your case information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer>
+        <div class="container footer-content">
+            <div class="feedback">
+                <button class="feedback-btn">Provide Feedback</button>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: group8@advomate.com</p>
+                <p>Phone: 0123-45679</p>
+                <p><a href="#">www.advomate.com</a></p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="../JavaScript/userProfile.js"></script>
+</body>
+</html>

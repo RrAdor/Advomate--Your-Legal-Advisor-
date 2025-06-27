@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdVomate - Track My Activities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/track.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="../Image/Advomate.png" alt="AdVomate Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+            </div>
+            <div class="brand">AdVomate</div>
+        </div>
+        <div class="nav-links">
+            <a href="homePage.html">Home</a>
+            <a href="chatBot.html">Services</a>
+            <a href="Resources.html">Resources</a>
+            <a href="aboutUs.html">About Us</a>
+        </div>
+        <div class="auth-links" id="authSection">
+            <a href="login.html">Log In</a>
+            <a href="login.html">Register</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <h1>My Cases To-Do List</h1>
+            <p id="welcomeText">Track your legal cases and mark them as solved or ongoing</p>
+        </div>
+
+        <!-- Add New Case Form -->
+        <div class="add-case-section">
+            <div class="add-case-form">
+                <select id="caseType">
+                    <option value="">Select Case Type</option>
+                    <option value="Property Dispute">Property Dispute</option>
+                    <option value="Family Law">Family Law</option>
+                    <option value="Corporate Law">Corporate Law</option>
+                    <option value="Criminal Law">Criminal Law</option>
+                    <option value="Immigration Law">Immigration Law</option>
+                    <option value="Labor Law">Labor Law</option>
+                    <option value="Constitutional Law">Constitutional Law</option>
+                    <option value="Tax Law">Tax Law</option>
+                    <option value="Environmental Law">Environmental Law</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button id="addCaseBtn">
+                    <i class="fas fa-plus"></i>
+                    Add Case
+                </button>
+            </div>
+        </div>
+
+        <!-- Cases List -->
+        <div class="cases-container" id="casesContainer">
+            <!-- Example cases will be added here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <i class="fas fa-clipboard-list"></i>
+            <h3>No cases yet</h3>
+            <p>Select a case type above to start tracking your legal matters and mark them as solved when complete</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <button class="feedback-btn">Send Feedback</button>
+            <div class="contact-info">
+                <p><strong>Contact Us</strong></p>
+                <p>Email: <a href="mailto:info@advomate.com">info@advomate.com</a></p>
+                <p>Phone: <a href="tel:+880123456789">+880 1234 56789</a></p>
+                <p>Address: 123, Dhaka, Bangladesh</p>
+                <p>&copy; 2025 AdVomate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="../JavaScript/track.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdvoMate - Legal Resources Portal</title>
+    <link rel="stylesheet" href="../CSS/Resources.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-placeholder">
+                    <img src="../Image/Advomate.png" alt="Advomate Logo" style="width: 50px; height: 50px; width: auto;">
+                </div>
+                <h1>Advomate</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="login-register">
+                <a href="login.html">Log In</a>
+                <a href="login.html">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Legal Issues Section -->
+        <section class="legal-issues-section">
+            <h2 class="section-title">Understand Your Legal Issues</h2>
+            <div class="legal-cards-grid">
+                <!-- Criminal Law Card -->
+                <div class="legal-card">
+                    <div class="card-image"><img src= "../Image/download.jpg"></div>
+                    <h3 class="card-title">Criminal Law</h3>
+                    <div class="card-description">
+                        Criminal law deals with behavior that is considered harmful to society as a whole. It includes prosecution by the government of wrongful acts which are classified as crimes. Criminal law covers offenses such as murder, theft, assault, fraud, and other violations of public order.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Corporate Law Card -->
+                <div class="legal-card">
+                    <div class="card-image"><img src= "../Image/what-is-corporate-law.webp"></div>
+                    <h3 class="card-title">Corporate Law</h3>
+                    <div class="card-description">
+                        Corporate law governs the formation, operation, and dissolution of corporations. It covers matters such as corporate governance, mergers and acquisitions, securities regulation, and shareholder rights. This area of law ensures that businesses operate within legal frameworks.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Administrative Law Card -->
+                <div class="legal-card">
+                    <div class="card-image"><img src ="../Image/blog_full_administrative-law.jpg"></div>
+                    <h3 class="card-title">Administrative Law</h3>
+                    <div class="card-description">
+                        Administrative law governs the activities of administrative agencies of government. It includes the rules, regulations, and orders by which administrative agencies exercise their authority. This field covers regulatory compliance, government procedures, and public administration.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Constitutional Law Card -->
+                <div class="legal-card">
+                    <div class="card-image"><img src ="../Image/law-constitutional.webp"></div>
+                    <h3 class="card-title">Constitutional Law</h3>
+                    <div class="card-description">
+                        Constitutional law deals with the interpretation and implementation of the constitution. It covers fundamental rights, separation of powers, federalism, and the relationship between different branches of government. This field ensures that laws comply with constitutional principles.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Labour Law Card -->
+                <div class="legal-card">
+                    <div class="card-image"><img src ="../Image/Labour-Law-option-3.webp"></div>
+                    <h3 class="card-title">Labour Law</h3>
+                    <div class="card-description">
+                        Labour law governs the relationship between workers, employers, trade unions, and the government. It covers employment contracts, workplace safety, wages, working hours, discrimination, and collective bargaining. This field protects workers' rights and ensures fair employment practices.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Intellectual Property Law Card -->
+                <div class="legal-card">
+                    <div class="card-image"><img src ="../Image/images.png"></div>
+                    <h3 class="card-title">Intellectual Property Law</h3>
+                    <div class="card-description">
+                        Intellectual Property law protects creations of the mind, including inventions, literary and artistic works, designs, symbols, names, and images used in commerce. It covers patents, copyrights, trademarks, and trade secrets, ensuring creators can benefit from their innovations.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button for Entire Section -->
+            <div class="load-more-button-section" style="text-align: center; margin-top: 3rem;">
+                <button id="main-load-more-btn" class="btn btn-secondary" onclick="loadMoreLaws()" style="font-size: 1.2rem; padding: 1rem 2rem;">
+                    Load More Legal Areas
+                </button>
+            </div>
+
+            <!-- Additional Legal Areas Section -->
+            <div id="additional-legal-areas" class="load-more-section">
+                <div class="legal-cards-grid">
+                    <!-- Family Law Card -->
+                    <div class="legal-card">
+                        <div class="card-image"><img src= "../Image/family.jpg"></div>
+                        <h3 class="card-title">Family Law</h3>
+                        <div class="card-description">
+                            Family law covers legal matters related to family relationships, including marriage, divorce, child custody, adoption, domestic violence, and property settlements. It aims to protect the rights and interests of family members.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                        </div>
+                    </div>
+
+                    <!-- Contract Law Card -->
+                    <div class="legal-card">
+                        <div class="card-image"><img src= "../Image/contract.jpg"></div>
+                        <h3 class="card-title">Contract Law</h3>
+                        <div class="card-description">
+                            Contract law governs the formation, performance, and enforcement of agreements between parties. It covers breach of contract, contract interpretation, and remedies for contractual disputes.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                        </div>
+                    </div>
+
+                    <!-- Property Law Card -->
+                    <div class="legal-card">
+                        <div class="card-image"><img src= "../Image/property.webp"></div>
+                        <h3 class="card-title">Property Law</h3>
+                        <div class="card-description">
+                            Property law deals with the ownership and use of real and personal property. It covers property rights, land transactions, landlord-tenant relationships, and property disputes.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                        </div>
+                    </div>
+
+                    <!-- Tax Law Card -->
+                    <div class="legal-card">
+                        <div class="card-image"><img src= "../Image/tax.jpg"></div>
+                        <h3 class="card-title">Tax Law</h3>
+                        <div class="card-description">
+                            Tax law governs the collection of taxes and the resolution of tax disputes. It covers income tax, corporate tax, VAT, customs duties, and tax compliance matters.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                        </div>
+                    </div>
+
+                    <!-- Environmental Law Card -->
+                    <div class="legal-card">
+                        <div class="card-image"><img src= "../Image/environmental.webp"></div>
+                        <h3 class="card-title">Environmental Law</h3>
+                        <div class="card-description">
+                            Environmental law focuses on protecting the environment and natural resources. It covers pollution control, environmental impact assessments, and sustainable development regulations.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                        </div>
+                    </div>
+
+                    <!-- Immigration Law Card -->
+                    <div class="legal-card">
+                        <div class="card-image"><img src= "../Image/Immigration.jpg"></div>
+                        <h3 class="card-title">Immigration Law</h3>
+                        <div class="card-description">
+                            Immigration law governs the entry, stay, and status of foreign nationals. It covers visa applications, citizenship, deportation, and refugee protection.
+                        </div>
+                        <div class="card-buttons">
+                            <button class="btn btn-primary" onclick="toggleDescription(this)">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="constitution-section">
+            <div class="constitution-card">
+                <h2 class="constitution-title">
+                    Constitution of People's Republic of Bangladesh
+                </h2>
+                <p class="constitution-description">
+                    The Constitution of Bangladesh is the supreme law of Bangladesh. It was adopted by the Constituent Assembly of Bangladesh on November 4, 1972, and came into effect on December 16, 1972. The Constitution establishes Bangladesh as a secular, democratic republic and enshrines fundamental human rights, the structure of government, and the rule of law. It has been amended seventeen times since its adoption, reflecting the evolving needs of the nation while maintaining its core democratic principles.
+                </p>
+                <a href="http://bdlaws.minlaw.gov.bd/act-367.html" target="_blank" class="btn btn-primary">
+                    Read Full Constitution
+                </a>
+            </div>
+        </section>
+
+        <section class="courts-section">
+            <h2 class="section-title">Court Addresses in Bangladesh</h2>
+            <div class="courts-grid">
+                <div class="court-category">
+                    <h3>Supreme Court of Bangladesh</h3>
+                    <ul class="court-list">
+                        <li>
+                            <strong>Supreme Court of Bangladesh</strong>
+                            <div class="court-address">Ramna, Dhaka-1000</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="court-category">
+                    <h3>High Court Division</h3>
+                    <ul class="court-list">
+                        <li>
+                            <strong>High Court Division</strong>
+                            <div class="court-address">Supreme Court Premises, Ramna, Dhaka</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="court-category">
+                    <h3>Appellate Division</h3>
+                    <ul class="court-list">
+                        <li>
+                            <strong>Appellate Division</strong>
+                            <div class="court-address">Supreme Court Premises, Ramna, Dhaka</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="court-category">
+                    <h3>Major District Courts</h3>
+                    <ul class="court-list">
+                        <li>
+                            <strong>Chief Metropolitan Magistrate Court, Dhaka</strong>
+                            <div class="court-address">Bakshibazar, Dhaka</div>
+                        </li>
+                        <li>
+                            <strong>District Judge Court, Dhaka</strong>
+                            <div class="court-address">Bakshibazar, Dhaka</div>
+                        </li>
+                        <li>
+                            <strong>District Judge Court, Chittagong</strong>
+                            <div class="court-address">Court Building, Chittagong</div>
+                        </li>
+                        <li>
+                            <strong>District Judge Court, Sylhet</strong>
+                            <div class="court-address">Court Building, Sylhet</div>
+                        </li>
+                        <li>
+                            <strong>District Judge Court, Rajshahi</strong>
+                            <div class="court-address">Court Building, Rajshahi</div>
+                        </li>
+                        <li>
+                            <strong>District Judge Court, Barisal</strong>
+                            <div class="court-address">Court Building, Barisal</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="court-category">
+                    <h3>Special Courts</h3>
+                    <ul class="court-list">
+                        <li>
+                            <strong>Administrative Tribunal</strong>
+                            <div class="court-address">Segunbagicha, Dhaka</div>
+                        </li>
+                        <li>
+                            <strong>International Crimes Tribunal</strong>
+                            <div class="court-address">Old High Court Building, Dhaka</div>
+                        </li>
+                        <li>
+                            <strong>Labour Court</strong>
+                            <div class="court-address">Bijoynagar, Dhaka</div>
+                        </li>
+                        <li>
+                            <strong>Family Court</strong>
+                            <div class="court-address">Various Districts</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="court-category">
+                    <h3>Subordinate Courts</h3>
+                    <ul class="court-list">
+                        <li>
+                            <strong>Additional District Judge Courts</strong>
+                            <div class="court-address">Various Districts</div>
+                        </li>
+                        <li>
+                            <strong>Senior Judicial Magistrate Courts</strong>
+                            <div class="court-address">Various Districts</div>
+                        </li>
+                        <li>
+                            <strong>Judicial Magistrate Courts</strong>
+                            <div class="court-address">Various Districts</div>
+                        </li>
+                        <li>
+                            <strong>Metropolitan Magistrate Courts</strong>
+                            <div class="court-address">Major Cities</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="feedback">
+                <button class="feedback-btn">Provide Feedback</button>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: group8@advomate.com</p>
+                <p>Phone: 0123-45679</p>
+                <p><a href="#">www.advomate.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/Resources.js"></script>
+</body>
+</html>
