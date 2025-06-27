@@ -18,7 +18,6 @@ function checkUserSession() {
         currentUser = JSON.parse(sessionUser);
         showUserWelcome();
     } else if (userEmail) {
-        // User is logged in but navigated directly, try to load user data
         loadUserDataFromEmail(userEmail);
     } else {
         showLoginRegister();
@@ -27,12 +26,9 @@ function checkUserSession() {
 
 async function loadUserDataFromEmail(email) {
     try {
-        // You would need to import Supabase here if available
-        // For now, just show a generic welcome
         currentUser = { name: 'User', email: email };
         showUserWelcome();
         
-        // If Supabase is available, you could load full user data:
         /*
         const { data, error } = await supabase
             .from('users')
@@ -105,7 +101,6 @@ function setupLogout() {
 }
 
 function logout() {
-    // Clear all stored user data
     localStorage.removeItem('userEmail');
     sessionStorage.removeItem('currentUser');
     currentUser = null;
@@ -114,10 +109,8 @@ function logout() {
     showLoginRegister();
     
     // Optionally redirect to home page
-    // window.location.href = 'homePage.html';
 }
 
-// Existing chatbot code
 const messagesContainer = document.querySelector('.chatbot-messages');
 const input = document.querySelector('.message-input');
 const sendBtn = document.querySelector('.send-btn');
