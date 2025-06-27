@@ -274,8 +274,6 @@
             }
         }
 
-        // --- Event Listeners ---
-
         // Initial load
         document.addEventListener('DOMContentLoaded', () => {
             loadUserData();
