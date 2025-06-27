@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #1A1A1A;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Division 1: Header */
+header {
+    background-color: #1A1A1A;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: left;
+}
+
+.logo h1 {
+    margin-left: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+.login-register {
+    display: flex;
+}
+
+.login-register a {
+    margin-left: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-register a:hover {
+    color: #3498db;
+}
+
+/* Division 2: Our Story Section */
+.story-section {
+    padding: 4rem 0;
+    display: flex;
+    gap: 2rem;
+    background-color: #e4dac9;
+}
+
+.story-content {
+    flex: 0.7;
+}
+
+.story-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.story-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.image-slider {
+    flex: 0.3;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider-images {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slider-images.active {
+    opacity: 1;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.slider-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background-color: #db8734;
+}
+
+/* Division 3: Legal Advice & Lawyer Search */
+.services-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.service-box1 {
+    background-image: url('../Image/chatbot bg.jpg');
+    background-size: cover;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.service-box2 {
+    background-image: url('../Image/9719948.jpg');
+    background-size: cover;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-box1 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white ;
+}
+.service-box2 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white ;
+}
+
+.chatbot-container { 
+    margin-top: 1.5rem;
+}
+
+.suggestion-prompts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.prompt-button {
+    background-color: #e7f3ff;
+    border: 1px solid #bbd8f7;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #2980b9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.prompt-button:hover {
+    background-color: #d0e6f8;
+}
+
+.search-container {
+    margin-top: 1.5rem;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Division 4: Client Stats */
+.client-stats {
+    padding: 4rem 0;
+    background-color: #2c3e50;
+    background-image: url('../Image/bg.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.stats-heading {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.client-stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stats-section {
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stat-box {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #3498db;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #f0ead6;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+}
+
+.testimonials-section {
+    flex: 0.6;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    height: 300px;
+}
+
+.testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+}
+
+.testimonial-content {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    text-align: right;
+}
+
+.testimonial-controls {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.testimonial-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.testimonial-dot.active {
+    background-color: #3498db;
+}
+
+/* Division 5: Footer */
+footer {
+    background-color: #1A1A1A;
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback-btn {
+    background-color: #e4dac9;
+    color: black;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-btn:hover {
+    background-color: #2980b9;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    nav ul li {
+        margin-left: 0;
+    }
+    
+    .story-section {
+        flex-direction: column;
+    }
+    
+    .story-content, .image-slider {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .client-stats-container {
+        flex-direction: column;
+    }
+    
+    .stats-section, .testimonials-section {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
