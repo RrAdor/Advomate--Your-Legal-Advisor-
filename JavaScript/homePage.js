@@ -1,4 +1,4 @@
-            // Enhanced JavaScript for both sliders
+
             document.addEventListener('DOMContentLoaded', function() {
             // Testimonial slider functionality
             const testimonialSlides = document.querySelectorAll('.testimonial-slide');
